@@ -16,7 +16,7 @@
 #define FTP_PORT 21
 #define MAX_LENGTH 1024
 
-/* Struct to hold parsed URL information [cite: 61] */
+/* Struct to hold parsed URL information */
 struct URL {
     char user[128];
     char password[128];
@@ -29,7 +29,7 @@ struct URL {
 int parse_url(char *input, struct URL *url) {
     char *p = input;
     
-    // Default credentials [cite: 61]
+    // Default credentials
     strcpy(url->user, "anonymous");
     strcpy(url->password, "anonymous@");
 
@@ -152,7 +152,7 @@ int main(int argc, char **argv) {
     printf("Parsed Info:\nUser: %s\nPass: %s\nHost: %s\nPath: %s\nFile: %s\n\n", 
            url.user, url.password, url.host, url.path, url.filename);
 
-    /* 1. DNS Resolution (Reused from getip.c) [cite: 65, 76] */
+    /* 1. DNS Resolution (Reused from getip.c) */
     struct hostent *h;
     if ((h = gethostbyname(url.host)) == NULL) {
         herror("gethostbyname()");
