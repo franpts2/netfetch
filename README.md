@@ -1,3 +1,29 @@
+# RESET/INITIAL CONFIG
+
+Reboot all Tuxs (2,3,4).
+
+```bash
+sudo reboot
+```
+
+Reset system configuration of switch and router via GTK Term (you need to change the cable connection from Switch Cons and Router Cons)
+
+Connect to all Tuxs via ssh:
+
+```bash
+ssh netedu@tux82
+
+ssh netedu@tux83
+
+ssh netedu@tux84
+```
+
+Go to root on all Tuxs:
+
+```bash
+sudo su
+```
+
 # Exp 1
 
 Connect cables 3 and 4:
