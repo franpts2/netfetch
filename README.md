@@ -8,6 +8,10 @@ sudo reboot
 
 Reset system configuration of switch and router via GTK Term (you need to change the cable connection from Switch Cons and Router Cons)
 
+```
+/system reset-configuration
+```
+
 Connect to all Tuxs via ssh:
 
 ```bash
