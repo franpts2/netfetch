@@ -116,7 +116,7 @@ connect cables:
 
 - TUXY4 E2 no 17
 
-in every TUX:
+TUX Y4:
 
 ```bash
 sysctl net.ipv4.ip_forward=1
