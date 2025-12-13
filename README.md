@@ -82,8 +82,8 @@ system reset-configuration
 login: admin
 enter enter enter
 
-/interface bridge add name=bridge10
-/interface bridge add name=bridge11
+/interface bridge add name=bridgeY0
+/interface bridge add name=bridgeY1
 /interface bridge print brief (ver que as bridges estão lá)
 ```
 
@@ -94,9 +94,9 @@ no print aparece um bridge default que temos que remover:
 /interface bridge port remove [find interface = ether15]
 /interface bridge port remove [find interface = ether16]
 
-/interface bridge port add bridge=bridge10 interface = ether15
-/interface bridge port add bridge=bridge10 interface = ether16
-/interface bridge port add bridge=bridge11 interface = ether14
+/interface bridge port add bridge=bridgeY0 interface = ether15
+/interface bridge port add bridge=bridgeY0 interface = ether16
+/interface bridge port add bridge=bridgeY1 interface = ether14
 
 /interface bridge port print (brief)
 ```
@@ -173,7 +173,7 @@ In the Switch Cons:
 /interface bridge port remove [find interface=ether10]
 
 # Add port to the corresponding bridges
-/interface bridge port add bridge=bridge81 interface=ether10
+/interface bridge port add bridge=bridgeY1 interface=ether10
 ```
 
 In the Router Cons:
