@@ -164,7 +164,7 @@ ping 172.16.Y1.1
 
 # Exp 4
 
-Connect **ether1** of the router to **PY.24** and **ether2** of the router to **ether10** on the switch (bridge81)
+Connect **ether1** of the router to **PY.24** and **ether2** of the router to **ether10** on the switch (bridgeY1)
 
 In the Switch Cons:
 
@@ -180,42 +180,42 @@ In the Router Cons:
 
 ```bash
 # Setup ether1 interface
-/ip address add address=172.16.1.81/24 interface=ether1
+/ip address add address=172.16.1.Y1/24 interface=ether1
 
 # Setup ether2 interface
-/ip address add address=172.16.81.254/24 interface=ether2
+/ip address add address=172.16.Y1.254/24 interface=ether2
 ```
 
 TUX Y3:
 
 ```bash
-route add -net 172.16.81.0/24 gw 172.16.80.254
-route add -net 172.16.1.0/24 gw 172.16.80.254
+route add -net 172.16.Y1.0/24 gw 172.16.Y0.254
+route add -net 172.16.1.0/24 gw 172.16.Y0.254
 ```
 
 TUX Y4:
 
 ```bash
-route add -net 172.16.1.0/24 gw 172.16.81.254
+route add -net 172.16.1.0/24 gw 172.16.Y1.254
 ```
 
 TUX Y2:
 
 ```bash
-route add -net 172.16.80.0/24 gw 172.16.81.253
-route add -net 172.16.1.0/24 gw 172.16.81.254
+route add -net 172.16.Y0.0/24 gw 172.16.Y1.253
+route add -net 172.16.1.0/24 gw 172.16.Y1.254
 ```
 
 In the Router Cons:
 
 ```bash
-/ip route add dst-address=172.16.80.0/24 gateway=172.16.81.253
+/ip route add dst-address=172.16.Y0.0/24 gateway=172.16.Y1.253
 ```
 
 TUX Y3:
 
 ```html
-ping 172.16.80.254 ping 172.16.81.1 ping 172.16.81.254
+ping 172.16.Y0.254 ping 172.16.Y1.1 ping 172.16.Y1.254
 ```
 
 TUX Y2:
@@ -224,23 +224,23 @@ TUX Y2:
 sysctl net.ipv4.conf.if_e1.accept_redirects=0
 sysctl net.ipv4.conf.all.accept_redirects=0
 
-route add -net 172.16.80.0/24 gw 172.16.81.254
+route add -net 172.16.Y0.0/24 gw 172.16.Y1.254
 
 // ping tux3
-ping 172.16.80.1
+ping 172.16.Y0.1
 
 // traceroute tux3
-traceroute 172.16.80.1 // 3 respostas
+traceroute 172.16.Y0.1 // 3 respostas
 
 // change the routes to use again tux4 as the gateway to subnet instead of Rc
-route add -net 172.16.80.0/24 gw 172.16.81.253
-traceroute 172.16.80.1 // 2 respostas
+route add -net 172.16.Y0.0/24 gw 172.16.Y1.253
+traceroute 172.16.Y0.1 // 2 respostas
 
 // activate the acceptance of icmp redirect
-route del -net 172.16.80.0/24 gw 172.16.81.253
+route del -net 172.16.Y0.0/24 gw 172.16.Y1.253
 sysctl net.ipv4.conf.if_e1.accept_redirects=1
 sysctl net.ipv4.conf.all.accept_redirects=1
-traceroute 172.16.80.1 // 3 respostas de novo
+traceroute 172.16.Y0.1 // 3 respostas de novo
 ```
 
 TUX Y3:
