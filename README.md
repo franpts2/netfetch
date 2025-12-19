@@ -278,7 +278,7 @@ TUX Y2:
 Edit `/etc/resolv.conf` (`nano /etc/resolv.conf`) on Tux3, Tux4 and Tux2 by adding this entry:
 
 ```bash
-services.netlab.fe.up.pt 10.227.20.3
+nameserver 10.227.20.3
 ```
 
 In every TUX:
