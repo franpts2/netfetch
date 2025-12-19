@@ -250,7 +250,7 @@ TUX Y3:
 
 ```html
 // ping ftp server
-ping 172.16.1.10 //funciona!!!!!
+ping 172.16.1.10 funciona!!!!!
 ```
 
 TUX Y2:
@@ -263,7 +263,7 @@ TUX Y2:
 TUX Y3:
 
 ```html
-ping 172.16.1.254 nao funciona!!!
+ping 172.16.1.10 nao funciona!!!
 ```
 
 TUX Y2:
