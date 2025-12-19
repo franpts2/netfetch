@@ -133,7 +133,7 @@ TUX Y2:
 
 ```
 /interface bridge port remove [find interface=ether17]
-/interface bridge port add bridge=bridge11 interface=ether17
+/interface bridge port add bridge=bridgeY1 interface=ether17
 ```
 
 TUX Y3:
@@ -249,7 +249,8 @@ traceroute 172.16.Y0.1 // 3 respostas de novo
 TUX Y3:
 
 ```html
-// ping ftp server ping 172.16.1.10 funciona!!!!!
+// ping ftp server
+ping 172.16.1.10 //funciona!!!!!
 ```
 
 TUX Y2:
