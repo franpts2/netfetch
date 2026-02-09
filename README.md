@@ -1,4 +1,4 @@
-# RCOM_LAB2 — Download Client
+# netfetch — Download Client
 
 Short lab project implementing a file-download client in C.
 
