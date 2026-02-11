@@ -32,7 +32,6 @@ See `script.md` and `manualconfig-guide.md` for example runs and configuration s
 ## Notes
 
 - This README is intentionally minimal; refer to `manualconfig-guide.md` for network setup, test cases, and manual verification steps.
-- If you want, I can extend this README with a full example run, expected output, or a small test harness.
 
 ## Development Team
 
