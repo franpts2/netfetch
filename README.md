@@ -53,7 +53,7 @@ This project was developed by:
 
 **Course**
 
-Developed for the RCOM (Computer Networks) course at FEUP (Faculty of Engineering, University of Porto).
+Developed for the **RCOM (Computer Networks)** course in 2025/26 at FEUP (Faculty of Engineering, University of Porto).
 
 ## License
 
