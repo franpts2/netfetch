@@ -1,8 +1,17 @@
-# netfetch — Download Client
+# netfetch
 
-Short lab project implementing a file-download client in C.
+A small file-download client in C, built for a computer networks lab.
 
-## Repository contents
+<p align="left">
+  <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C">
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+</p>
+
+## About
+
+netfetch is a short lab project implementing a file-download client in C. It is meant to be run in the course's network lab, with the setup notes in `manualconfig-guide.md`.
+
+## Project Structure
 
 - `download.c`: Main C source implementing the download client.
 - `manualconfig-guide.md`: Manual configuration and setup notes used during the lab.
@@ -13,7 +22,7 @@ Short lab project implementing a file-download client in C.
 - A POSIX-compatible system (Linux tested).
 - `gcc` (or compatible C compiler).
 
-## Build
+## Quick Start
 
 Compile the program with:
 
@@ -33,13 +42,23 @@ See `script.md` and `manualconfig-guide.md` for example runs and configuration s
 
 - This README is intentionally minimal; refer to `manualconfig-guide.md` for network setup, test cases, and manual verification steps.
 
-## Development Team
+## Team & Course
+
+**Team**
 
 This project was developed by:
 
 - [Francisca Portugal](https://github.com/franpts2)
 - [Maria Luiza Vieira](https://github.com/maluviieira)
 
-## Course Information
+**Course**
 
 Developed for the RCOM (Computer Networks) course at FEUP (Faculty of Engineering, University of Porto).
+
+## License
+
+Coursework submitted at FEUP. Shared for reference; all rights reserved unless stated otherwise.
+
+---
+
+_netfetch — fetch the file, understand the wire._
